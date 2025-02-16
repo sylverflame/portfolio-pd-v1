@@ -3,12 +3,69 @@
 @tailwind utilities;
 
 :root {
-  --background-color: black;
-  --text-primary: white;
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(240 10% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --accent: hsl(240 4.8% 95.9%);
+  --accent-foreground: hsl(240 5.9% 10%);
+}
+
+.dark {
+  --background: hsl(40 10% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(240 5.9% 10%);
+  --secondary: hsl(240 3.7% 15.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --accent: hsl(240 3.7% 15.9%);
+  --accent-foreground: hsl(0 0% 98%);
+}
+
+.dark.theme-violet {
+  --background: hsl(224 71.4% 4.1%);
+  --foreground: hsl(210 20% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(210 20% 98%);
+  --secondary: hsl(215 27.9% 16.9%);
+  --secondary-foreground: hsl(210 20% 98%);
+  --accent: hsl(262.1 83.3% 57.8%);
+  --accent-foreground: hsl(0 0% 98%);
+  --bg-navbar: hsla(224, 71%, 4%, 0.5);
+}
+
+.dark.theme-red {
+  --background: hsl(224 71.4% 4.1%);
+  --foreground: hsl(210 20% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(210 20% 98%);
+  --secondary: hsl(215 27.9% 16.9%);
+  --secondary-foreground: hsl(210 20% 98%);
+  --accent: hsl(0, 72%, 51%);
+  --accent-foreground: hsl(0 0% 98%);
+  --bg-navbar: hsla(224, 71%, 4%, 0.5);
+}
+
+.dark.theme-blue {
+  --background: hsl(224 71.4% 4.1%);
+  --foreground: hsl(210 20% 98%);
+  --primary: hsl(0 0% 98%);
+  --primary-foreground: hsl(210 20% 98%);
+  --secondary: hsl(215 27.9% 16.9%);
+  --secondary-foreground: hsl(210 20% 98%);
+  --accent: hsl(218, 92%, 60%);
+  --accent-foreground: hsl(0 0% 98%);
+  --bg-navbar: hsla(224, 71%, 4%, 0.5);
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
 }
