@@ -1,0 +1,7 @@
+.pratik-picture {
+  background-image: url("../../assets/Pratik.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+}

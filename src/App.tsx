@@ -7,29 +7,36 @@ import cn from "classnames";
 
 function App() {
   const [theme, setTheme] = useState("theme-violet");
+  const [hideNavbar, setHideNavbar] = useState(false);
+  const [previousScroll, setPreviousScroll] = useState(0);
+
   useEffect(() => {
     document.addEventListener("scroll", () => {
+      let theme = "";
       if (window.scrollY < 500) {
-        setTheme("theme-violet");
-      } else if (window.scrollY > 500 && window.scrollY < 800) {
-        setTheme("theme-red");
-      } else if (window.scrollY > 900) {
-        setTheme("theme-blue");
+        theme = "theme-violet";
+      } else if (window.scrollY >= 500 && window.scrollY <= 800) {
+        theme = "theme-red";
+      } else if (window.scrollY > 800) {
+        theme = "theme-blue";
       }
+      setTheme(theme);
     });
   }, []);
 
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      setHideNavbar(window.scrollY > previousScroll ? true : false);
+      Math.floor(window.scrollY / 10) > 0 && setPreviousScroll(window.scrollY);
+    });
+  }, [previousScroll]);
+
   return (
     <div
-      className={cn(
-        "app-component p-5 sm:px-10 dark bg-[var(--background)]",
-        theme
-      )}
+      className={cn("app-component p-10 dark bg-[var(--background)]", theme)}
     >
       {/* Navbar */}
-      <header>
-        <Navbar />
-      </header>
+      <Navbar hideNavbar={hideNavbar} />
       <main>
         <Home />
         <About />

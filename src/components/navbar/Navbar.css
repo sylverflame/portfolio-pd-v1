@@ -1,0 +1,6 @@
+.navbar-component {
+  transition: transform 0.5s ease;
+}
+.hide-navbar {
+  transform: translateY(-100%);
+}
