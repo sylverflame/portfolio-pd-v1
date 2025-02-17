@@ -1,7 +1,54 @@
 .pratik-picture {
   background-image: url("../../assets/Pratik.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 1;
+}
+
+/* .pratik-picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--accent);
+  mix-blend-mode: color;
+  transition: background-color 150ms ease-in-out;
+  border-radius: 50%;
+}
+
+.pratik-picture:hover::after {
+  background-color: none;
+} */
+
+.github-logo {
+  background-image: url("../../assets/github-mark-white.svg");
+  scale: 0.7;
+}
+.gitlab-logo {
+  background-image: url("https://images.ctfassets.net/xz1dnu24egyd/3JZABhkTjUT76LCIclV7sH/17a92be9bce78c2adcc43e23aabb7ca1/gitlab-logo-500.svg");
+}
+
+.github-logo::after,
+.gitlab-logo::after,
+.resume::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--accent);
+  mix-blend-mode: color;
+  transition: opacity 150ms ease-in-out;
+  border-radius: 10%;
+  opacity: 80%;
+}
+
+.github-logo::after {
+  scale: 1.4;
+}
+
+.github-logo:hover::after,
+.gitlab-logo:hover::after,
+.resume:hover::after {
+  opacity: 50%;
 }

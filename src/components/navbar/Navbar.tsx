@@ -30,7 +30,7 @@ function Navbar({ hideNavbar }: NavbarProps) {
   const scrollContentIntoView = (section: string) => {
     const element = document.getElementById(section);
     if (element) {
-      const offset = 80;
+      const offset = section === "Home" ? 120 : 80;
       const topPos =
         element.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: topPos, behavior: "smooth" });
