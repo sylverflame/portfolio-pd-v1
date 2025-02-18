@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import cn from "classnames";
 import Hamburger from "./components/ui/Hamburger";
+import Experience from "./components/experience/Experience";
 
 export type NavbarMenuItem = { label: string };
 
@@ -59,7 +60,7 @@ function App() {
   const scrollContentIntoView = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = sectionId === "Home" ? 120 : 80;
+      const offset = sectionId === "Home" ? 120 : 100;
       const topPos =
         element.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top: topPos, behavior: "smooth" });
@@ -84,6 +85,7 @@ function App() {
       <main>
         <Home />
         <About />
+        <Experience />
       </main>
       <footer></footer>
       {showHamburgerMenu && (
