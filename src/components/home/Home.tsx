@@ -5,7 +5,7 @@ function Home() {
   return (
     <section
       id="Home"
-      className="home-component h-[calc(100vh-100px)] mt-[80px] text-[var(--foreground)] max-w-[1024px] m-auto relative"
+      className="home-component h-[calc(100vh-100px)] text-[var(--foreground)] max-w-[1024px] m-auto flex items-center"
     >
       <BlurBgProvider>
         <div className="relative z-10 grid grid-cols-12 gap-6">
@@ -27,11 +27,18 @@ function Home() {
           </div>
           <div className="pratik-picture col-span-12 sm:col-span-6 xl:col-span-4 m-auto w-[200px] md:w-[300px] xl:w-[335px] hidden sm:block relative rounded-full aspect-square bg-center bg-no-repeat bg-contain" />
           <div className="links col-span-12 flex flex-wrap gap-4">
-            <div className="resume p-2 cursor-pointer relative">Resume</div>
+            <a
+              className="resume p-2 cursor-pointer relative"
+              href="https://drive.google.com/file/d/1xzbUBiC1Oz7afVI_78vM4wlpkhkbhMgZ/view"
+            >
+              Resume
+            </a>
             <a
               className="github-logo w-10 aspect-square bg-center bg-no-repeat bg-contain relative cursor-pointer"
               href="https://github.com/sylverflame/"
-            ></a>
+            >
+              {" "}
+            </a>
             <a className="gitlab-logo w-10 aspect-square bg-center bg-no-repeat bg-contain relative cursor-pointer"></a>
           </div>
         </div>

@@ -4,10 +4,12 @@ function About() {
   return (
     <section
       id="About"
-      className="about-component border rounded max-w-[1024px] m-auto h-screen relative text-[var(--foreground)]"
+      className="about-component max-w-[1024px] m-auto h-screen relative text-[var(--foreground)]"
     >
       <BlurBgProvider>
-        <div className="relative z-10 ">About Component</div>
+        <h2 className="text-4xl lg:text-5xl xl:text-6xl text-[var(--accent)] font-bold shadow">
+          About Me!
+        </h2>
       </BlurBgProvider>
     </section>
   );

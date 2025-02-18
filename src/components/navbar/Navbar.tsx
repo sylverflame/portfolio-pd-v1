@@ -1,42 +1,16 @@
 import cn from "classnames";
 import "./Navbar.css";
+import { NavbarMenuItem } from "../../App";
 
 type NavbarProps = {
   hideNavbar: boolean;
+  setShowHamburgerMenu: Function;
+  showHamburgerMenu: boolean;
+  menuItems: NavbarMenuItem[];
+  scrollContentIntoView: (sectionId: string) => void;
 };
 
-function Navbar({ hideNavbar }: NavbarProps) {
-  const NAVBAR_MENU = [
-    {
-      label: "Home",
-    },
-    {
-      label: "About",
-    },
-    {
-      label: "Experience",
-    },
-    {
-      label: "Skills",
-    },
-    {
-      label: "Projects",
-    },
-    {
-      label: "Contact",
-    },
-  ];
-
-  const scrollContentIntoView = (section: string) => {
-    const element = document.getElementById(section);
-    if (element) {
-      const offset = section === "Home" ? 120 : 80;
-      const topPos =
-        element.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: topPos, behavior: "smooth" });
-    }
-  };
-
+function Navbar({ hideNavbar, menuItems, scrollContentIntoView }: NavbarProps) {
   return (
     <header
       className={cn(
@@ -50,7 +24,7 @@ function Navbar({ hideNavbar }: NavbarProps) {
         </div>
         <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <ul className="hidden md:flex gap-10 text-[var(--foreground)]">
-            {NAVBAR_MENU.map((navItem) => {
+            {menuItems.map((navItem) => {
               return (
                 <li
                   key={navItem.label}
@@ -66,11 +40,6 @@ function Navbar({ hideNavbar }: NavbarProps) {
             })}
           </ul>
         </nav>
-        <div className="hamburger-menu md:hidden flex flex-col justify-center gap-1 w-[25px]">
-          <div className=" h-[2px] bg-[var(--foreground)]"></div>
-          <div className=" h-[2px] bg-[var(--foreground)]"></div>
-          <div className=" h-[2px] bg-[var(--foreground)]"></div>
-        </div>
       </div>
     </header>
   );
