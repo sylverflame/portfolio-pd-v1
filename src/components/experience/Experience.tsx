@@ -1,5 +1,7 @@
 import BlurBgProvider from "../ui/BlurBgProvider";
 import "./Experience.css";
+import { MdWork } from "react-icons/md";
+import { IoBookOutline } from "react-icons/io5";
 
 function Experience() {
   const EXP_NODES = [
@@ -60,7 +62,13 @@ function Experience() {
                   <div className="text-justify text-xs mt-2">
                     {experience.description}
                   </div>
-                  <div className="xp-type absolute w-[20px] sm:w-[40px] md:w-[60px] bg-[var(--accent)] -left-[10%] top-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full aspect-square" />
+                  <div className="xp-type absolute w-[30px] sm:w-[40px] md:w-[60px] bg-[var(--accent)] -left-[10%] top-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full aspect-square flex justify-center items-center z-30">
+                    {experience.type === "work" ? (
+                      <MdWork className="text-xl md:text-3xl" />
+                    ) : (
+                      <IoBookOutline className="text-xl md:text-3xl" />
+                    )}
+                  </div>
                 </li>
               );
             })}

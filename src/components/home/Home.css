@@ -39,7 +39,7 @@
   background-color: var(--accent);
   mix-blend-mode: color;
   transition: opacity 150ms ease-in-out;
-  border-radius: 10%;
+  border-radius: 10px;
   opacity: 80%;
 }
 
