@@ -86,20 +86,13 @@ function App() {
         <About />
       </main>
       <footer></footer>
-      <div
-        className={cn(
-          "hamburger-container fixed top-0 left-0 w-full h-screen z-30 opacity-0 bg-[var(--bg-navbar)]",
-          { "opacity-100 backdrop-blur-md": showHamburgerMenu }
-        )}
-      >
-        {showHamburgerMenu && (
-          <NavMenuHamburger
-            menuItems={NAVBAR_MENU}
-            scrollContentIntoView={scrollContentIntoView}
-            setShowHamburgerMenu={setShowHamburgerMenu}
-          />
-        )}
-      </div>
+      {showHamburgerMenu && (
+        <NavMenuHamburger
+          menuItems={NAVBAR_MENU}
+          scrollContentIntoView={scrollContentIntoView}
+          setShowHamburgerMenu={setShowHamburgerMenu}
+        />
+      )}
       <div className="fixed right-8 top-8 z-50">
         <Hamburger
           onClick={() => setShowHamburgerMenu((prev) => !prev)}
@@ -122,7 +115,7 @@ function NavMenuHamburger({
   setShowHamburgerMenu,
 }: NavMenuHambergurProps) {
   return (
-    <div className="fixed left-0 top-0 w-full h-screen z-40">
+    <div className="animate-hamburgerFadeIn fixed left-0 top-0 w-full h-screen z-40 bg-[var(--bg-navbar)] backdrop-blur-lg">
       <ul className="flex flex-col gap-8 text-[var(--foreground)] absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
         {menuItems.map((navItem) => {
           return (

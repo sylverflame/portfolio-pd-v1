@@ -6,6 +6,7 @@ module.exports = {
       animation: {
         fadeIn: "fadeIn 2s ease-in-out infinite alternate",
         fadeOut: "fadeOut 1.5s ease-in-out infinite alternate",
+        hamburgerFadeIn: "fadeIn 0.3s ease-in",
       },
       keyframes: {
         fadeIn: {
