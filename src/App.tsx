@@ -7,6 +7,8 @@ import cn from "classnames";
 import Hamburger from "./components/ui/Hamburger";
 import Experience from "./components/experience/Experience";
 import Skills from "./components/skills/Skills";
+import Projects from "./components/projects/Projects";
+import HamburgerMenu from "./components/ui/HamburgerMenu";
 
 export type NavbarMenuItem = { label: string };
 
@@ -87,6 +89,7 @@ function App() {
         <About />
         <Experience />
         <Skills />
+        <Projects />
       </main>
       <footer></footer>
       <div className="fixed right-8 top-8 z-50">
@@ -102,40 +105,6 @@ function App() {
           setShowHamburgerMenu={setShowHamburgerMenu}
         />
       )}
-    </div>
-  );
-}
-
-type NavMenuHambergurProps = {
-  menuItems: NavbarMenuItem[];
-  scrollContentIntoView: (sectionId: string) => void;
-  setShowHamburgerMenu: Function;
-};
-
-function HamburgerMenu({
-  menuItems,
-  scrollContentIntoView,
-  setShowHamburgerMenu,
-}: NavMenuHambergurProps) {
-  return (
-    <div className="animate-hamburgerFadeIn fixed left-0 top-0 w-full h-screen z-40 bg-[var(--bg-navbar)] backdrop-blur-lg">
-      <ul className="flex flex-col gap-8 text-[var(--foreground)] absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
-        {menuItems.map((navItem) => {
-          return (
-            <li
-              key={navItem.label}
-              className="hover:text-[var(--accent)] transition-colors text-2xl"
-              onClick={(event) => {
-                event.preventDefault();
-                scrollContentIntoView(navItem.label);
-                setShowHamburgerMenu(false);
-              }}
-            >
-              <a href="">{navItem.label}</a>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }
