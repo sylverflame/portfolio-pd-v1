@@ -1,4 +1,4 @@
-import BlurBgProvider from "../ui/BlurBgProvider";
+import BlurBgProvider from "@/components/ui/BlurBgProvider";
 import "./Experience.css";
 import { MdWork } from "react-icons/md";
 import { IoBookOutline } from "react-icons/io5";

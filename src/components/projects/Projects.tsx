@@ -1,4 +1,4 @@
-import BlurBgProvider from "../ui/BlurBgProvider";
+import BlurBgProvider from "@/components/ui/BlurBgProvider";
 
 function Projects() {
   return (

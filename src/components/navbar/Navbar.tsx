@@ -1,6 +1,6 @@
 import cn from "classnames";
 import "./Navbar.css";
-import { NavbarMenuItem } from "../../App";
+import { NavbarMenuItem } from "@/App";
 
 type NavbarProps = {
   hideNavbar: boolean;

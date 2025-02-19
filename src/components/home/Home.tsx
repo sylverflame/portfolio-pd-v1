@@ -1,4 +1,4 @@
-import BlurBgProvider from "../ui/BlurBgProvider";
+import BlurBgProvider from "@/components/ui/BlurBgProvider";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaGitlab } from "react-icons/fa6";

@@ -31,7 +31,7 @@ import {
 } from "react-icons/si";
 import { TbApi, TbBrandNextjs } from "react-icons/tb";
 import { VscTerminalCmd, VscVscode } from "react-icons/vsc";
-import BlurBgProvider from "../ui/BlurBgProvider";
+import BlurBgProvider from "@/components/ui/BlurBgProvider";
 import "./Skills.css";
 
 type Skill = {

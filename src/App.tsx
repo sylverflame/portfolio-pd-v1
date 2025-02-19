@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import About from "./components/about/About";
-import Home from "./components/home/Home";
-import Navbar from "./components/navbar/Navbar";
+import About from "@/components/about/About";
+import Home from "@/components/home/Home";
+import Navbar from "@/components/navbar/Navbar";
 import cn from "classnames";
-import Hamburger from "./components/ui/Hamburger";
-import Experience from "./components/experience/Experience";
-import Skills from "./components/skills/Skills";
-import Projects from "./components/projects/Projects";
-import HamburgerMenu from "./components/ui/HamburgerMenu";
+import Hamburger from "@/components/ui/Hamburger";
+import Experience from "@/components/experience/Experience";
+import Skills from "@/components/skills/Skills";
+import Projects from "@/components/projects/Projects";
+import HamburgerMenu from "@/components/ui/HamburgerMenu";
 
 export type NavbarMenuItem = { label: string };
 
