@@ -34,6 +34,8 @@ function Home() {
             <a
               className="resume p-2 px-3 cursor-pointer relative flex items-center gap-2"
               href="https://drive.google.com/file/d/1xzbUBiC1Oz7afVI_78vM4wlpkhkbhMgZ/view"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {<FaExternalLinkAlt />}
               Resume
@@ -41,18 +43,24 @@ function Home() {
             <a
               className="resume p-2 px-3 cursor-pointer relative flex items-center"
               href="https://github.com/sylverflame/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {<FaGithub className="text-3xl" />}
             </a>
             <a
               className="resume p-2 px-3 cursor-pointer relative flex items-center"
               href="https://gitlab.com/users/tiptoppratik/projects"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {<FaGitlab className="text-2xl" />}
             </a>
             <a
               className="resume p-2 px-3 cursor-pointer relative flex items-center"
               href="https://www.linkedin.com/in/pratik-desai-3a8a7632/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {<FaLinkedin className="text-3xl" />}
             </a>

@@ -58,7 +58,7 @@ function Experience() {
         <div className="xp-card-container">
           <ul className="flex flex-col mt-6 items-start w-[80%]">
             {EXP_NODES.map((experience) => {
-              return <XpCard experience={experience} />;
+              return <XpCard experience={experience} key={experience.title} />;
             })}
           </ul>
         </div>
@@ -75,7 +75,7 @@ function XpCard({ experience }: XpCardProps) {
   return (
     <li
       key={experience.title}
-      className="xp-card mt-4 p-4 border rounded bg-[black]/50 w-full relative"
+      className="xp-card mt-4 p-4 border rounded-xl bg-[black]/50 w-full relative"
     >
       <div className="text-[--accent] font-bold">{experience.title}</div>
       <div className="text-xs italic">

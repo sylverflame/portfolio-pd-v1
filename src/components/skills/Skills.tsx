@@ -1,37 +1,8 @@
+import BlurBgProvider from "@/components/ui/BlurBgProvider";
+import { SKILL_ICONS } from "@/constants/skill-icons";
 import { useState } from "react";
 import { type IconType } from "react-icons";
-import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
-import {
-  FaAngular,
-  FaAws,
-  FaBootstrap,
-  FaCss3Alt,
-  FaDocker,
-  FaGitAlt,
-  FaHtml5,
-  FaJs,
-  FaNodeJs,
-  FaReact,
-  FaStar,
-  FaStarHalf,
-} from "react-icons/fa";
-import {
-  SiExpress,
-  SiFirebase,
-  SiFormik,
-  SiJenkins,
-  SiMongodb,
-  SiMui,
-  SiPrimereact,
-  SiRedux,
-  SiSocketdotio,
-  SiTailwindcss,
-  SiVite,
-  SiWebpack,
-} from "react-icons/si";
-import { TbApi, TbBrandNextjs } from "react-icons/tb";
-import { VscTerminalCmd, VscVscode } from "react-icons/vsc";
-import BlurBgProvider from "@/components/ui/BlurBgProvider";
+import { FaStar, FaStarHalf } from "react-icons/fa";
 import "./Skills.css";
 
 type Skill = {
@@ -46,37 +17,37 @@ type Skill = {
 function Skills() {
   const LANGUAGES_LIST: Skill[] = [
     {
-      name: "Javascript",
+      name: "JavaScript",
       category: "Language",
-      icon: FaJs,
+      icon: SKILL_ICONS.JavaScript,
       rating: 4.5,
       comment: "I'm an expert!",
     },
     {
-      name: "Typescript",
+      name: "TypeScript",
       category: "Language",
-      icon: BiLogoTypescript,
+      icon: SKILL_ICONS.TypeScript,
       rating: 4,
       comment: "I'm an expert!",
     },
     {
       name: "HTML5",
       category: "Language",
-      icon: FaHtml5,
+      icon: SKILL_ICONS.HTML5,
       rating: 5,
       comment: "I'm an expert!",
     },
     {
       name: "CSS3",
       category: "Language",
-      icon: FaCss3Alt,
+      icon: SKILL_ICONS.CSS3,
       rating: 4,
       comment: "I'm an expert!",
     },
     {
       name: "C",
       category: "Language",
-      icon: VscTerminalCmd,
+      icon: SKILL_ICONS.C,
       rating: 1,
       comment: "The first language!",
     },
@@ -85,63 +56,63 @@ function Skills() {
     {
       name: "React.js",
       category: "Frontend",
-      icon: FaReact,
+      icon: SKILL_ICONS.Reactjs,
       rating: 4.5,
       comment: "I'm an expert!",
     },
     {
       name: "Next.js",
       category: "Frontend",
-      icon: TbBrandNextjs,
+      icon: SKILL_ICONS.Nextjs,
       rating: 3,
       comment: "I do understand SSR and App Router!",
     },
     {
       name: "Angular",
       category: "Frontend",
-      icon: FaAngular,
+      icon: SKILL_ICONS.Angular,
       rating: 1,
       comment: "Good with the basics!",
     },
     {
       name: "Redux",
       category: "Frontend",
-      icon: SiRedux,
+      icon: SKILL_ICONS.Redux,
       rating: 4.5,
       comment: "Good Experience wih this!",
     },
     {
       name: "Tailwind CSS",
       category: "Frontend",
-      icon: SiTailwindcss,
+      icon: SKILL_ICONS.Tailwind,
       rating: 4,
       comment: "The greatest CSS tool ever!",
     },
     {
-      name: "Prime React",
+      name: "Primereact",
       category: "Frontend",
-      icon: SiPrimereact,
+      icon: SKILL_ICONS.Primereact,
       rating: 4.5,
       comment: "Omnistore used this library!",
     },
     {
       name: "Bootstrap",
       category: "Frontend",
-      icon: FaBootstrap,
+      icon: SKILL_ICONS.Bootstrap,
       rating: 4,
       comment: "The OG CSS library!",
     },
     {
-      name: "Material UI",
+      name: "MaterialUI",
       category: "Frontend",
-      icon: SiMui,
+      icon: SKILL_ICONS.MaterialUI,
       rating: 4,
       comment: "A library I have used, but prefer not!",
     },
     {
       name: "Formik",
       category: "Frontend",
-      icon: SiFormik,
+      icon: SKILL_ICONS.Formik,
       rating: 4,
       comment: "Complicated forms? Not anymore!",
     },
@@ -151,28 +122,28 @@ function Skills() {
     {
       name: "Node.js",
       category: "Frontend",
-      icon: FaNodeJs,
+      icon: SKILL_ICONS.Nodejs,
       rating: 4,
       comment: "Thorough with Node!",
     },
     {
       name: "Express.js",
       category: "Frontend",
-      icon: SiExpress,
+      icon: SKILL_ICONS.Expressjs,
       rating: 4,
       comment: "I do know SSR!",
     },
     {
       name: "Socket.io",
       category: "Frontend",
-      icon: SiSocketdotio,
+      icon: SKILL_ICONS.Socketio,
       rating: 3,
       comment: "I have built some chat apps and realtime games!",
     },
     {
       name: "RESTful APIs",
       category: "Frontend",
-      icon: TbApi,
+      icon: SKILL_ICONS.RESTAPI,
       rating: 4.5,
       comment: "A good understaning of designing and building them!",
     },
@@ -182,21 +153,21 @@ function Skills() {
     {
       name: "Firebase",
       category: "Frontend",
-      icon: SiFirebase,
+      icon: SKILL_ICONS.Firebase,
       rating: 3,
       comment: "I do know SSR!",
     },
     {
       name: "PostgreSQL",
       category: "Frontend",
-      icon: BiLogoPostgresql,
+      icon: SKILL_ICONS.PostgreSQL,
       rating: 3,
       comment: "I do know SSR!",
     },
     {
       name: "MongoDB",
       category: "Frontend",
-      icon: SiMongodb,
+      icon: SKILL_ICONS.MongoDB,
       rating: 3,
       comment: "I do know SSR!",
     },
@@ -206,67 +177,94 @@ function Skills() {
     {
       name: "Webpack",
       category: "Frontend",
-      icon: SiWebpack,
+      icon: SKILL_ICONS.Webpack,
       rating: 3,
       comment: "I do know SSR!",
     },
     {
       name: "Vite",
       category: "Frontend",
-      icon: SiVite,
+      icon: SKILL_ICONS.Vite,
       rating: 4,
       comment: "I do know SSR!",
     },
     {
       name: "VS Code",
       category: "Frontend",
-      icon: VscVscode,
+      icon: SKILL_ICONS.VSCode,
       rating: 4.5,
       comment: "I do know SSR!",
     },
     {
       name: "git",
       category: "Frontend",
-      icon: FaGitAlt,
+      icon: SKILL_ICONS.Git,
       rating: 4.5,
       comment: "I do know SSR!",
     },
     {
       name: "Docker",
       category: "Frontend",
-      icon: FaDocker,
+      icon: SKILL_ICONS.Docker,
       rating: 2,
       comment: "I do know SSR!",
     },
     {
       name: "Jenkins",
       category: "Frontend",
-      icon: SiJenkins,
+      icon: SKILL_ICONS.Jenkins,
       rating: 2,
       comment: "I do know SSR!",
     },
     {
       name: "AWS",
       category: "Frontend",
-      icon: FaAws,
+      icon: SKILL_ICONS.AWS,
       rating: 2,
       comment: "I do know SSR!",
+    },
+  ];
+
+  const SKILL_LIST = [
+    {
+      category: "Languages",
+      skillsList: LANGUAGES_LIST,
+    },
+    {
+      category: "Frontend",
+      skillsList: FRONTEND_LIST,
+    },
+    {
+      category: "Backend",
+      skillsList: BACKEND_SKILLS,
+    },
+    {
+      category: "Database",
+      skillsList: DB_SKILLS,
+    },
+    {
+      category: "Others",
+      skillsList: OTHER_SKILLS,
     },
   ];
   return (
     <section
       id="Skills"
-      className="skills-component max-w-[1024px] m-auto h-screen relative text-[var(--foreground)]"
+      className="skills-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)] pb-36"
     >
       <BlurBgProvider>
         <h2 className="text-4xl lg:text-5xl xl:text-6xl text-[var(--accent)] font-bold shadow">
           Skills
         </h2>
-        <SkillsList category="Languages" skillsList={LANGUAGES_LIST} />
-        <SkillsList category="Frontend" skillsList={FRONTEND_LIST} />
-        <SkillsList category="Backend" skillsList={BACKEND_SKILLS} />
-        <SkillsList category="Database" skillsList={DB_SKILLS} />
-        <SkillsList category="Others" skillsList={OTHER_SKILLS} />
+        {SKILL_LIST.map((skill, index) => {
+          return (
+            <SkillsList
+              key={index}
+              category={skill.category}
+              skillsList={skill.skillsList}
+            />
+          );
+        })}
       </BlurBgProvider>
     </section>
   );
@@ -304,15 +302,19 @@ function SkillsList({ category, skillsList }: SkillsListProps) {
         {skillsList.map((skill) => {
           return (
             <li
-              className="skill bg-[var(--accent)] flex items-center gap-2 p-2 px-3 rounded-[10px] relative text-sm"
+              className="skill bg-[var(--accent)] flex items-center gap-2 p-2 px-3 rounded-xl relative text-sm"
               data-comment={skill.comment}
               onMouseEnter={() => setHoveredSkill(skill.name)} // Track hovered skill
               onMouseLeave={() => setHoveredSkill(null)}
+              key={skill.name}
             >
-              <skill.icon className="md:text-3xl" />
+              <skill.icon className="md:text-2xl" />
               <span>{skill.name}</span>
               {hoveredSkill === skill.name && (
-                <div className="skill-rating flex flex-col">
+                <div
+                  className="skill-rating flex flex-col"
+                  key={skill.name + skill.rating}
+                >
                   <div className="flex">{getRatingStars(skill.rating)}</div>
                   <div>{skill.comment}</div>
                 </div>
