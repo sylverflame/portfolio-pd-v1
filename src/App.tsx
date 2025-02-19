@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import cn from "classnames";
 import Hamburger from "./components/ui/Hamburger";
 import Experience from "./components/experience/Experience";
+import Skills from "./components/skills/Skills";
 
 export type NavbarMenuItem = { label: string };
 
@@ -74,7 +75,6 @@ function App() {
         theme
       )}
     >
-      {/* Navbar */}
       <Navbar
         hideNavbar={hideNavbar}
         setShowHamburgerMenu={setShowHamburgerMenu}
@@ -86,21 +86,22 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Skills />
       </main>
       <footer></footer>
-      {showHamburgerMenu && (
-        <NavMenuHamburger
-          menuItems={NAVBAR_MENU}
-          scrollContentIntoView={scrollContentIntoView}
-          setShowHamburgerMenu={setShowHamburgerMenu}
-        />
-      )}
       <div className="fixed right-8 top-8 z-50">
         <Hamburger
           onClick={() => setShowHamburgerMenu((prev) => !prev)}
           showHamburgerMenu={showHamburgerMenu}
         />
       </div>
+      {showHamburgerMenu && (
+        <HamburgerMenu
+          menuItems={NAVBAR_MENU}
+          scrollContentIntoView={scrollContentIntoView}
+          setShowHamburgerMenu={setShowHamburgerMenu}
+        />
+      )}
     </div>
   );
 }
@@ -111,7 +112,7 @@ type NavMenuHambergurProps = {
   setShowHamburgerMenu: Function;
 };
 
-function NavMenuHamburger({
+function HamburgerMenu({
   menuItems,
   scrollContentIntoView,
   setShowHamburgerMenu,

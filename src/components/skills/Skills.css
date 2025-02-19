@@ -1,0 +1,28 @@
+.skill:hover {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.skill:hover {
+  transform: translate3d(0px, -2px, 1px);
+  filter: drop-shadow(10px);
+}
+.skill-rating {
+  content: attr(data-comment);
+  height: 100%;
+  width: 200%;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: var(--bg-navbar);
+  position: absolute;
+  left: 0;
+  top: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}

@@ -39,7 +39,7 @@ function Home() {
               Resume
             </a>
             <a
-              className="resume p-2 px-3 cursor-pointer relative"
+              className="resume p-2 px-3 cursor-pointer relative flex items-center"
               href="https://github.com/sylverflame/"
             >
               {<FaGithub className="text-3xl" />}

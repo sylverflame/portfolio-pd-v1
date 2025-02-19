@@ -39,7 +39,7 @@ function Experience() {
   return (
     <section
       id="Experience"
-      className="experience-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)]"
+      className="experience-component max-w-[1024px] m-auto relative text-[var(--foreground)] pb-36"
     >
       <BlurBgProvider>
         <h2 className="text-4xl lg:text-5xl xl:text-6xl text-[var(--accent)] font-bold shadow">
