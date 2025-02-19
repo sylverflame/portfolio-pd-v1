@@ -3,8 +3,18 @@ import "./Experience.css";
 import { MdWork } from "react-icons/md";
 import { IoBookOutline } from "react-icons/io5";
 
+type ExperienceType = {
+  type: "work" | "education";
+  title: string;
+  organization: string;
+  location: string;
+  startDate: Date;
+  endDate: Date;
+  description: string;
+};
+
 function Experience() {
-  const EXP_NODES = [
+  const EXP_NODES: ExperienceType[] = [
     {
       type: "work",
       title: "Frontend Web Developer",
@@ -48,34 +58,38 @@ function Experience() {
         <div className="xp-card-container">
           <ul className="flex flex-col mt-6 items-start w-[80%]">
             {EXP_NODES.map((experience) => {
-              return (
-                <li
-                  key={experience.title}
-                  className="xp-card mt-4 p-4 border rounded bg-[black]/50 w-full relative"
-                >
-                  <div className="text-[--accent] font-bold">
-                    {experience.title}
-                  </div>
-                  <div className="text-xs italic">
-                    {experience.organization} - {experience.location}
-                  </div>
-                  <div className="text-justify text-xs mt-2">
-                    {experience.description}
-                  </div>
-                  <div className="xp-type absolute w-[30px] sm:w-[40px] md:w-[60px] bg-[var(--accent)] -left-[10%] top-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full aspect-square flex justify-center items-center z-30">
-                    {experience.type === "work" ? (
-                      <MdWork className="text-xl md:text-3xl" />
-                    ) : (
-                      <IoBookOutline className="text-xl md:text-3xl" />
-                    )}
-                  </div>
-                </li>
-              );
+              return <XpCard experience={experience} />;
             })}
           </ul>
         </div>
       </BlurBgProvider>
     </section>
+  );
+}
+
+type XpCardProps = {
+  experience: ExperienceType;
+};
+
+function XpCard({ experience }: XpCardProps) {
+  return (
+    <li
+      key={experience.title}
+      className="xp-card mt-4 p-4 border rounded bg-[black]/50 w-full relative"
+    >
+      <div className="text-[--accent] font-bold">{experience.title}</div>
+      <div className="text-xs italic">
+        {experience.organization} - {experience.location}
+      </div>
+      <div className="text-justify text-xs mt-2">{experience.description}</div>
+      <div className="xp-type absolute w-[30px] sm:w-[40px] md:w-[60px] bg-[var(--accent)] -left-[10%] top-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full aspect-square flex justify-center items-center z-30">
+        {experience.type === "work" ? (
+          <MdWork className="text-xl md:text-3xl" />
+        ) : (
+          <IoBookOutline className="text-xl md:text-3xl" />
+        )}
+      </div>
+    </li>
   );
 }
 
