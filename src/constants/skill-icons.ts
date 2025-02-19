@@ -1,3 +1,4 @@
+import { SkillIcons } from "@/types";
 import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import {
   FaAngular,
@@ -28,7 +29,7 @@ import {
 import { TbApi, TbBrandNextjs } from "react-icons/tb";
 import { VscTerminalCmd, VscVscode } from "react-icons/vsc";
 
-const SKILL_ICONS = {
+const SKILL_ICONS: SkillIcons = {
   Reactjs: FaReact,
   Nextjs: TbBrandNextjs,
   Angular: FaAngular,
