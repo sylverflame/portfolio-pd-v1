@@ -70,7 +70,7 @@ function App() {
         <Projects />
       </main>
       <footer></footer>
-      <div className="fixed right-8 top-8 z-[200]">
+      <div className="fixed right-8 top-8 z-[250]">
         <Hamburger
           onClick={() => setShowHamburgerMenu((prev) => !prev)}
           showHamburgerMenu={showHamburgerMenu}

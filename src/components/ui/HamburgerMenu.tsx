@@ -1,4 +1,4 @@
-import { type NavbarMenuItem } from "@/App";
+import { NavbarMenuItem } from "@/types";
 
 type HamburgerMenuProps = {
   menuItems: NavbarMenuItem[];
