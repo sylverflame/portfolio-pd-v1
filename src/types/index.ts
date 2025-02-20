@@ -19,7 +19,7 @@ export type Skill = {
   comment: string;
 };
 
-export type SkillIcons = { [key: string]: IconType };
+export type SkillIcons = Record<string, IconType>;
 
 export type Project = {
   id: number;
@@ -29,4 +29,11 @@ export type Project = {
   repoLink?: string;
   bgImage?: string;
   skills?: (keyof SkillIcons)[];
+};
+
+export type ExternalLink = {
+  link: string;
+  icon: IconType;
+  title: string;
+  showTitle?: boolean;
 };

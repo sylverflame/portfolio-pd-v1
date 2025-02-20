@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import About from "@/components/about/About";
+// import About from "@/components/about/About";
 import Home from "@/components/home/Home";
 import Navbar from "@/components/navbar/Navbar";
 import cn from "classnames";
@@ -24,9 +24,9 @@ function App() {
       if (window.scrollY < 600) {
         theme = "theme-violet";
       } else if (window.scrollY >= 600 && window.scrollY <= 1200) {
-        theme = "theme-red";
-      } else if (window.scrollY > 1200) {
         theme = "theme-blue";
+      } else if (window.scrollY > 1200) {
+        theme = "theme-violet";
       }
       setTheme(theme);
     });
@@ -86,7 +86,7 @@ function App() {
       />
       <main>
         <Home />
-        <About />
+        {/* <About /> */}
         <Experience />
         <Skills />
         <Projects />

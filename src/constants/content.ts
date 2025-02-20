@@ -1,8 +1,45 @@
-import { ExperienceType, Project, Skill } from "@/types";
+import { ExperienceType, ExternalLink, Project, Skill } from "@/types";
 import { SKILL_ICONS } from "./skill-icons";
 import PortfolioImage from "@/assets/Prat_Portfolio.webp";
 import OmniImage from "@/assets/Omni.webp";
 import CNCImage from "@/assets/CNC.webp";
+
+// Home Section
+
+export const HOME_CONTENT = {
+  name: "Pratik Desai",
+  title: "Frontend Web Developer",
+  description:
+    "A Software Developer passionate about building fast, interactive, and user-friendly web applications. I love solving problems and creating useful web applications - To simply put it! :)",
+};
+
+export const ABOUT_CONTENT = {
+  descOne: "",
+};
+
+export const HOME_LINKS: ExternalLink[] = [
+  {
+    link: "https://drive.google.com/file/d/1xzbUBiC1Oz7afVI_78vM4wlpkhkbhMgZ/view",
+    icon: SKILL_ICONS.ExternalLink,
+    title: "Resume",
+    showTitle: true,
+  },
+  {
+    link: "https://github.com/sylverflame/",
+    icon: SKILL_ICONS.Github,
+    title: "Github",
+  },
+  {
+    link: "https://gitlab.com/users/tiptoppratik/projects",
+    icon: SKILL_ICONS.Gitlab,
+    title: "Gitlab",
+  },
+  {
+    link: "https://www.linkedin.com/in/pratik-desai-3a8a7632/",
+    icon: SKILL_ICONS.Linkedin,
+    title: "Linkedin",
+  },
+];
 
 // Experience Section
 export const EXP_NODES: ExperienceType[] = [
@@ -13,8 +50,7 @@ export const EXP_NODES: ExperienceType[] = [
     location: "Bengaluru, India",
     startDate: new Date("Jan 2022"),
     endDate: new Date("Dec 2024"),
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dicta dolore neque accusamus autem laudantium veniam est asperiores nostrum tempore, deserunt perferendis esse in, ad quam doloribus libero sequi soluta!",
+    description: "",
   },
   {
     type: "work",
@@ -23,8 +59,7 @@ export const EXP_NODES: ExperienceType[] = [
     location: "Bengaluru, India | Montreal, Canada",
     startDate: new Date("Feb 2014"),
     endDate: new Date("Jan 2022"),
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dicta dolore neque accusamus autem laudantium veniam est asperiores nostrum tempore, deserunt perferendis esse in, ad quam doloribus libero sequi soluta!",
+    description: "",
   },
   {
     type: "education",
@@ -33,8 +68,7 @@ export const EXP_NODES: ExperienceType[] = [
     location: "Belgaum, India",
     startDate: new Date("Aug 2009"),
     endDate: new Date("Aug 2013"),
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dicta dolore neque accusamus autem laudantium veniam est asperiores nostrum tempore, deserunt perferendis esse in, ad quam doloribus libero sequi soluta!",
+    description: "",
   },
 ];
 
@@ -253,22 +287,27 @@ export const SKILL_LIST = [
   {
     category: "Languages",
     skillsList: LANGUAGES_LIST,
+    zIndex: 100,
   },
   {
     category: "Frontend",
     skillsList: FRONTEND_LIST,
+    zIndex: 80,
   },
   {
     category: "Backend",
     skillsList: BACKEND_SKILLS,
+    zIndex: 60,
   },
   {
     category: "Database",
     skillsList: DB_SKILLS,
+    zIndex: 40,
   },
   {
     category: "Others",
     skillsList: OTHER_SKILLS,
+    zIndex: 20,
   },
 ];
 

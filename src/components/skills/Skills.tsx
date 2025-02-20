@@ -19,6 +19,7 @@ function Skills() {
               key={index}
               category={skill.category}
               skillsList={skill.skillsList}
+              zIndex={skill.zIndex}
             />
           );
         })}

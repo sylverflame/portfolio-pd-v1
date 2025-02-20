@@ -1,9 +1,7 @@
 import BlurBgProvider from "@/components/ui/BlurBgProvider";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa6";
-import { FaGitlab } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
 import "./Home.css";
+import { HOME_CONTENT, HOME_LINKS } from "@/constants/content";
+import ExternalLink from "./ExternalLink";
 
 function Home() {
   return (
@@ -18,52 +16,19 @@ function Home() {
             <h1 className="text-4xl lg:text-5xl xl:text-6xl">
               <span>I'm </span>
               <span className="text-[var(--accent)] font-bold shadow">
-                Pratik Desai
+                {HOME_CONTENT.name}
               </span>
             </h1>
             <div className="pratik-picture col-span-12 sm:col-span-6 xl:col-span-4 m-auto w-[200px] md:w-[300px] xl:w-[335px] mt-6 sm:hidden relative aspect-square bg-center bg-no-repeat bg-contain" />
             <div className="md:text-xl mt-6 text-justify">
-              A Software Developer passionate about building fast, interactive,
-              and user-friendly web applications. With experience in React.js,
-              TypeScript, Firebase, and Redux, I love solving problems and
-              creating seamless digital experiences.
+              {HOME_CONTENT.description}
             </div>
           </div>
           <div className="pratik-picture col-span-12 sm:col-span-6 xl:col-span-4 m-auto w-[200px] md:w-[300px] xl:w-[335px] hidden sm:block relative rounded-full aspect-square bg-center bg-no-repeat bg-contain" />
           <div className="links col-span-12 flex flex-wrap gap-4">
-            <a
-              className="resume p-2 px-3 cursor-pointer relative flex items-center gap-2"
-              href="https://drive.google.com/file/d/1xzbUBiC1Oz7afVI_78vM4wlpkhkbhMgZ/view"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {<FaExternalLinkAlt />}
-              Resume
-            </a>
-            <a
-              className="resume p-2 px-3 cursor-pointer relative flex items-center"
-              href="https://github.com/sylverflame/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {<FaGithub className="text-3xl" />}
-            </a>
-            <a
-              className="resume p-2 px-3 cursor-pointer relative flex items-center"
-              href="https://gitlab.com/users/tiptoppratik/projects"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {<FaGitlab className="text-2xl" />}
-            </a>
-            <a
-              className="resume p-2 px-3 cursor-pointer relative flex items-center"
-              href="https://www.linkedin.com/in/pratik-desai-3a8a7632/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {<FaLinkedin className="text-3xl" />}
-            </a>
+            {HOME_LINKS.map((link) => {
+              return <ExternalLink linkItem={link} key={link.link} />;
+            })}
           </div>
         </div>
       </BlurBgProvider>
