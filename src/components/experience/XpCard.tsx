@@ -16,7 +16,10 @@ function XpCard({ experience }: XpCardProps) {
       <div className="text-xs italic">
         {experience.organization} - {experience.location}
       </div>
-      <div className="text-xs mt-2">{experience.description}</div>
+      <div className="text-xs italic">
+        {experience.startDate} - {experience.endDate}
+      </div>
+      <div className="text-xs mt-4">{experience.description}</div>
       <div className="xp-type absolute w-[30px] sm:w-[40px] md:w-[60px] bg-[var(--accent)] -left-[10%] top-[50%] -translate-x-1/2 -translate-y-1/2 rounded-full aspect-square flex justify-center items-center z-30">
         {experience.type === "work" ? (
           <MdWork className="text-xl md:text-3xl" />

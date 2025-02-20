@@ -97,8 +97,8 @@ export const EXP_NODES: ExperienceType[] = [
     title: "Frontend Web Developer",
     organization: "Tata Consultancy Services (TCS)",
     location: "Bengaluru, India",
-    startDate: new Date("Jan 2022"),
-    endDate: new Date("Dec 2024"),
+    startDate: "Jan 2022",
+    endDate: "Dec 2024",
     description:
       "Exposure to working on a TCS product called OmniStore. Actively maintained different enterprise level web applications.",
   },
@@ -107,8 +107,8 @@ export const EXP_NODES: ExperienceType[] = [
     title: "Stress Analysis Engineer - Lead",
     organization: "Tata Consultancy Services (TCS)",
     location: "Bengaluru, India | Montreal, Canada",
-    startDate: new Date("Feb 2014"),
-    endDate: new Date("Jan 2022"),
+    startDate: "Feb 2014",
+    endDate: "Jan 2022",
     description:
       "Worked as a Mechanical Integrity and Lifing Specialist for Gas Turbine components.",
   },
@@ -117,8 +117,8 @@ export const EXP_NODES: ExperienceType[] = [
     title: "Bachelor of Engineering - Mechanical",
     organization: "Visveswaraya Technological University (VTU)",
     location: "Belgaum, India",
-    startDate: new Date("Aug 2009"),
-    endDate: new Date("Aug 2013"),
+    startDate: "Aug 2009",
+    endDate: "Aug 2013",
     description: "",
   },
 ];

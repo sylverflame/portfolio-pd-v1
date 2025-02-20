@@ -5,8 +5,8 @@ export type ExperienceType = {
   title: string;
   organization: string;
   location: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate: string;
   description: string;
 };
 
