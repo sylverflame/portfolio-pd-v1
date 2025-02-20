@@ -13,7 +13,7 @@ const ExternalLink = ({ linkItem }: ExternalLinkProps) => {
       aria-label={linkItem.title}
       title={linkItem.showTitle ? "" : linkItem.title}
     >
-      <linkItem.icon className="text-2xl" />
+      <linkItem.icon className="text-xl md:text-2xl" />
       {linkItem.showTitle ? linkItem.title : ""}
     </a>
   );

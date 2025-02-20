@@ -20,12 +20,10 @@ function Home() {
               </span>
             </h1>
             <div className="pratik-picture col-span-12 sm:col-span-6 xl:col-span-4 m-auto w-[200px] md:w-[300px] xl:w-[335px] mt-6 sm:hidden relative aspect-square bg-center bg-no-repeat bg-contain" />
-            <div className="md:text-xl mt-6 text-justify">
-              {HOME_CONTENT.description}
-            </div>
+            <div className="md:text-xl mt-6">{HOME_CONTENT.description}</div>
           </div>
           <div className="pratik-picture col-span-12 sm:col-span-6 xl:col-span-4 m-auto w-[200px] md:w-[300px] xl:w-[335px] hidden sm:block relative rounded-full aspect-square bg-center bg-no-repeat bg-contain" />
-          <div className="links col-span-12 flex flex-wrap gap-4">
+          <div className="links col-span-12 flex flex-wrap gap-2 md:gap-4">
             {HOME_LINKS.map((link) => {
               return <ExternalLink linkItem={link} key={link.link} />;
             })}

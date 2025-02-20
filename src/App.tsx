@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-// import About from "@/components/about/About";
+import About from "@/components/about/About";
+import Experience from "@/components/experience/Experience";
 import Home from "@/components/home/Home";
 import Navbar from "@/components/navbar/Navbar";
-import cn from "classnames";
-import Hamburger from "@/components/ui/Hamburger";
-import Experience from "@/components/experience/Experience";
-import Skills from "@/components/skills/Skills";
 import Projects from "@/components/projects/Projects";
+import Skills from "@/components/skills/Skills";
+import Hamburger from "@/components/ui/Hamburger";
 import HamburgerMenu from "@/components/ui/HamburgerMenu";
-
-export type NavbarMenuItem = { label: string };
+import cn from "classnames";
+import { useEffect, useState } from "react";
+import "./App.css";
+import { NAVBAR_MENU } from "./constants/content";
 
 function App() {
   const [theme, setTheme] = useState("theme-violet");
@@ -39,27 +38,6 @@ function App() {
     });
   }, [previousScroll]);
 
-  const NAVBAR_MENU: NavbarMenuItem[] = [
-    {
-      label: "Home",
-    },
-    {
-      label: "About",
-    },
-    {
-      label: "Experience",
-    },
-    {
-      label: "Skills",
-    },
-    {
-      label: "Projects",
-    },
-    {
-      label: "Contact",
-    },
-  ];
-
   const scrollContentIntoView = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -86,13 +64,13 @@ function App() {
       />
       <main>
         <Home />
-        {/* <About /> */}
+        <About />
         <Experience />
         <Skills />
         <Projects />
       </main>
       <footer></footer>
-      <div className="fixed right-8 top-8 z-50">
+      <div className="fixed right-8 top-8 z-[200]">
         <Hamburger
           onClick={() => setShowHamburgerMenu((prev) => !prev)}
           showHamburgerMenu={showHamburgerMenu}

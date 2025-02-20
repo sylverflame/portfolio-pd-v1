@@ -1,5 +1,4 @@
 import BlurBgProvider from "@/components/ui/BlurBgProvider";
-
 import { PROJECTS_LIST } from "@/constants/content";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";

@@ -30,6 +30,10 @@ import {
 } from "react-icons/si";
 import { TbApi, TbBrandNextjs } from "react-icons/tb";
 import { VscTerminalCmd, VscVscode } from "react-icons/vsc";
+import { LiaTableTennisSolid } from "react-icons/lia";
+import { LuGamepad2 } from "react-icons/lu";
+import { IoCameraOutline } from "react-icons/io5";
+import { PiGuitarLight } from "react-icons/pi";
 
 const SKILL_ICONS: Record<string, IconType> = {
   Reactjs: FaReact,
@@ -64,6 +68,10 @@ const SKILL_ICONS: Record<string, IconType> = {
   Github: FaGithub,
   Gitlab: FaGitlab,
   Linkedin: FaLinkedin,
+  TT: LiaTableTennisSolid,
+  Game: LuGamepad2,
+  Photography: IoCameraOutline,
+  Guitar: PiGuitarLight,
 };
 
 export { SKILL_ICONS };

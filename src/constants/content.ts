@@ -1,11 +1,36 @@
-import { ExperienceType, ExternalLink, Project, Skill } from "@/types";
+import {
+  ExperienceType,
+  ExternalLink,
+  NavbarMenuItem,
+  Project,
+  Skill,
+} from "@/types";
 import { SKILL_ICONS } from "./skill-icons";
 import PortfolioImage from "@/assets/Prat_Portfolio.webp";
 import OmniImage from "@/assets/Omni.webp";
 import CNCImage from "@/assets/CNC.webp";
 
-// Home Section
+// Navigation
 
+export const NAVBAR_MENU: NavbarMenuItem[] = [
+  {
+    label: "Home",
+  },
+  {
+    label: "About",
+  },
+  {
+    label: "Experience",
+  },
+  {
+    label: "Skills",
+  },
+  {
+    label: "Projects",
+  },
+];
+
+// Home Section
 export const HOME_CONTENT = {
   name: "Pratik Desai",
   title: "Frontend Web Developer",
@@ -14,7 +39,31 @@ export const HOME_CONTENT = {
 };
 
 export const ABOUT_CONTENT = {
-  descOne: "With 3 years of experience building frontend applications",
+  description:
+    "With 11 years of overall professional experience, I’ve spent the last 3 years as a Software Developer. My journey began in the Aerospace domain as a Mechanical Engineer (ADGT – Almost Rocket Science!), but during the COVID era, I discovered my passion for programming. As a self-taught developer, I transitioned into Frontend Web Development and have been building applications ever since. Currently, I’m expanding my expertise in Backend technologies, moving toward becoming a Full-Stack Developer.",
+  ps: "Apart from coding I enjoy the following activities!",
+  hobbies: [
+    {
+      id: 1,
+      name: "Gaming",
+      icon: SKILL_ICONS.Game,
+    },
+    {
+      id: 2,
+      name: "Photography",
+      icon: SKILL_ICONS.Photography,
+    },
+    {
+      id: 3,
+      name: "Table Tennis",
+      icon: SKILL_ICONS.TT,
+    },
+    {
+      id: 4,
+      name: "Guitar",
+      icon: SKILL_ICONS.Guitar,
+    },
+  ],
 };
 
 export const HOME_LINKS: ExternalLink[] = [
@@ -50,7 +99,8 @@ export const EXP_NODES: ExperienceType[] = [
     location: "Bengaluru, India",
     startDate: new Date("Jan 2022"),
     endDate: new Date("Dec 2024"),
-    description: "",
+    description:
+      "Exposure to working on a TCS product called OmniStore. Actively maintained different enterprise level web applications.",
   },
   {
     type: "work",
@@ -59,7 +109,8 @@ export const EXP_NODES: ExperienceType[] = [
     location: "Bengaluru, India | Montreal, Canada",
     startDate: new Date("Feb 2014"),
     endDate: new Date("Jan 2022"),
-    description: "",
+    description:
+      "Worked as a Mechanical Integrity and Lifing Specialist for Gas Turbine components.",
   },
   {
     type: "education",
@@ -78,7 +129,7 @@ const LANGUAGES_LIST: Skill[] = [
     name: "JavaScript",
     category: "Language",
     icon: SKILL_ICONS.JavaScript,
-    rating: 4.5,
+    rating: 4,
     comment: "I'm an expert!",
   },
   {
@@ -92,7 +143,7 @@ const LANGUAGES_LIST: Skill[] = [
     name: "HTML5",
     category: "Language",
     icon: SKILL_ICONS.HTML5,
-    rating: 5,
+    rating: 4.5,
     comment: "I'm an expert!",
   },
   {
@@ -181,21 +232,21 @@ const BACKEND_SKILLS: Skill[] = [
     name: "Node.js",
     category: "Frontend",
     icon: SKILL_ICONS.Nodejs,
-    rating: 4,
+    rating: 3,
     comment: "Thorough with Node!",
   },
   {
     name: "Express.js",
     category: "Frontend",
     icon: SKILL_ICONS.Expressjs,
-    rating: 4,
-    comment: "I do know SSR!",
+    rating: 3,
+    comment: "A good understanding setting up http servers and middlewares!",
   },
   {
     name: "Socket.io",
     category: "Frontend",
     icon: SKILL_ICONS.Socketio,
-    rating: 3,
+    rating: 2.5,
     comment: "I have built some chat apps and realtime games!",
   },
   {
@@ -213,21 +264,21 @@ const DB_SKILLS: Skill[] = [
     category: "Frontend",
     icon: SKILL_ICONS.Firebase,
     rating: 3,
-    comment: "I do know SSR!",
+    comment: "Basic understanding through personal projects!",
   },
   {
     name: "PostgreSQL",
     category: "Frontend",
     icon: SKILL_ICONS.PostgreSQL,
-    rating: 3,
-    comment: "I do know SSR!",
+    rating: 2,
+    comment: "Basic understanding through personal projects!",
   },
   {
     name: "MongoDB",
     category: "Frontend",
     icon: SKILL_ICONS.MongoDB,
-    rating: 3,
-    comment: "I do know SSR!",
+    rating: 2,
+    comment: "Basic understanding through personal projects!",
   },
 ];
 
@@ -237,49 +288,49 @@ const OTHER_SKILLS: Skill[] = [
     category: "Frontend",
     icon: SKILL_ICONS.Webpack,
     rating: 3,
-    comment: "I do know SSR!",
+    comment: "",
   },
   {
     name: "Vite",
     category: "Frontend",
     icon: SKILL_ICONS.Vite,
     rating: 4,
-    comment: "I do know SSR!",
+    comment: "Most used build tool!",
   },
   {
     name: "VS Code",
     category: "Frontend",
     icon: SKILL_ICONS.VSCode,
     rating: 4.5,
-    comment: "I do know SSR!",
+    comment: "No life without this one!",
   },
   {
     name: "git",
     category: "Frontend",
     icon: SKILL_ICONS.Git,
     rating: 4.5,
-    comment: "I do know SSR!",
+    comment: "Good with the necessary stuff!",
   },
   {
     name: "Docker",
     category: "Frontend",
     icon: SKILL_ICONS.Docker,
-    rating: 2,
-    comment: "I do know SSR!",
+    rating: 1.5,
+    comment: "Learning Docker!",
   },
   {
     name: "Jenkins",
     category: "Frontend",
     icon: SKILL_ICONS.Jenkins,
     rating: 2,
-    comment: "I do know SSR!",
+    comment: "Basics!",
   },
   {
     name: "AWS",
     category: "Frontend",
     icon: SKILL_ICONS.AWS,
     rating: 2,
-    comment: "I do know SSR!",
+    comment: "Understanding of EC2 and S3 modules!",
   },
 ];
 
@@ -317,29 +368,44 @@ export const PROJECTS_LIST: Project[] = [
     id: 1,
     title: "TCS OmniStore",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi id quo sit nemo maiores cupiditate, vel ab obcaecati voluptatum amet illo ad libero in asperiores ea aperiam ut autem!",
+      "TCS OmniStore is a unified commerce platform that enables seamless retail experiences across digital and physical touchpoints.",
     liveLink: "https://www.tcs.com/what-we-do/products-platforms/tcs-omnistore",
     bgImage: OmniImage,
-    skills: ["Reactjs", "Redux", "TypeScript", "Formik"],
+    skills: [
+      "Reactjs",
+      "Angular",
+      "Redux",
+      "TypeScript",
+      "Formik",
+      "Primereact",
+    ],
   },
   {
     id: 2,
     title: "Portfolio Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi id quo sit nemo maiores cupiditate, vel ab obcaecati voluptatum amet illo ad libero in asperiores ea aperiam ut autem!",
+      "This is a fun little website showcasing my projects and experience. Try finding all the hidden easter eggs :)",
     liveLink: "https://www.mepratikdesai.work/",
     repoLink: "https://github.com/sylverflame/portfolio-pd-v1",
     bgImage: PortfolioImage,
-    skills: ["Reactjs", "TypeScript"],
+    skills: ["Reactjs", "TypeScript", "Tailwind"],
   },
   {
     id: 3,
     title: "Count and Conquer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi id quo sit nemo maiores cupiditate, vel ab obcaecati voluptatum amet illo ad libero in asperiores ea aperiam ut autem!",
+      "Count and Conquer is an interactive math game designed to enhance quick arithmetic skills through timed challenges. It offers an engaging experience where players race against time and compete with other players across the world",
     liveLink: "https://countnconquer.netlify.app/",
     repoLink: "https://gitlab.com/tiptoppratik/math-party",
     bgImage: CNCImage,
-    skills: ["Reactjs", "TypeScript"],
+    skills: [
+      "Reactjs",
+      "TypeScript",
+      "RESTAPI",
+      "Nodejs",
+      "Expressjs",
+      "Firebase",
+      "Socketio",
+    ],
   },
 ];

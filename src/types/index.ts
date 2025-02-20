@@ -37,3 +37,5 @@ export type ExternalLink = {
   title: string;
   showTitle?: boolean;
 };
+
+export type NavbarMenuItem = { label: string };
