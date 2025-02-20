@@ -12,7 +12,7 @@ function HamburgerMenu({
   setShowHamburgerMenu,
 }: HamburgerMenuProps) {
   return (
-    <div className="animate-hamburgerFadeIn fixed left-0 top-0 w-full h-screen z-40 bg-[var(--bg-navbar)] backdrop-blur-lg">
+    <div className="animate-hamburgerFadeIn fixed left-0 top-0 w-full h-screen z-[200] bg-[var(--bg-navbar)] backdrop-blur-lg">
       <ul className="flex flex-col gap-8 text-[var(--foreground)] absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
         {menuItems.map((navItem) => {
           return (

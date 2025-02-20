@@ -14,7 +14,7 @@ function Navbar({ hideNavbar, menuItems, scrollContentIntoView }: NavbarProps) {
   return (
     <header
       className={cn(
-        "navbar-component z-20 h-[80px] w-full fixed left-0 top-0 px-10 bg-[var(--bg-navbar)] shadow flex items-center border-b-2 border-[var(--accent)] backdrop-blur-xl transition-colors",
+        "navbar-component z-[180] h-[80px] w-full fixed left-0 top-0 px-10 bg-[var(--bg-navbar)] shadow flex items-center border-b-2 border-[var(--accent)] backdrop-blur-xl transition-colors",
         { "hide-navbar": hideNavbar }
       )}
     >
