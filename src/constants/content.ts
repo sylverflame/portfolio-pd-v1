@@ -14,7 +14,7 @@ export const HOME_CONTENT = {
 };
 
 export const ABOUT_CONTENT = {
-  descOne: "",
+  descOne: "With 3 years of experience building frontend applications",
 };
 
 export const HOME_LINKS: ExternalLink[] = [
