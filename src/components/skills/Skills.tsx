@@ -2,10 +2,11 @@ import BlurBgProvider from "@/components/ui/BlurBgProvider";
 import { SKILL_LIST } from "@/constants/content";
 import SkillsList from "./SkillList";
 import "./Skills.css";
+import AnimatedSection from "../ui/AnimatedSection";
 
 function Skills() {
   return (
-    <section
+    <AnimatedSection
       id="Skills"
       className="skills-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)] pb-36"
     >
@@ -24,7 +25,7 @@ function Skills() {
           );
         })}
       </BlurBgProvider>
-    </section>
+    </AnimatedSection>
   );
 }
 

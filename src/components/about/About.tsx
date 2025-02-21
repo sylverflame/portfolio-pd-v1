@@ -1,9 +1,10 @@
 import { ABOUT_CONTENT } from "@/constants/content";
+import AnimatedSection from "../ui/AnimatedSection";
 import BlurBgProvider from "../ui/BlurBgProvider";
 
 function About() {
   return (
-    <section
+    <AnimatedSection
       id="About"
       className="about-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)] mt-36 pb-36"
     >
@@ -27,7 +28,7 @@ function About() {
           })}
         </ul>
       </BlurBgProvider>
-    </section>
+    </AnimatedSection>
   );
 }
 

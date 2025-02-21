@@ -2,10 +2,11 @@ import BlurBgProvider from "@/components/ui/BlurBgProvider";
 import { EXP_NODES } from "@/constants/content";
 import "./Experience.css";
 import XpCard from "./XpCard";
+import AnimatedSection from "../ui/AnimatedSection";
 
 function Experience() {
   return (
-    <section
+    <AnimatedSection
       id="Experience"
       className="experience-component max-w-[1024px] min-h-screen m-auto relative text-[var(--foreground)] pb-36"
     >
@@ -21,7 +22,7 @@ function Experience() {
           </ul>
         </div>
       </BlurBgProvider>
-    </section>
+    </AnimatedSection>
   );
 }
 

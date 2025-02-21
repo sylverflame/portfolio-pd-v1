@@ -2,10 +2,11 @@ import BlurBgProvider from "@/components/ui/BlurBgProvider";
 import { PROJECTS_LIST } from "@/constants/content";
 import ProjectCard from "./ProjectCard";
 import "./Projects.css";
+import AnimatedSection from "../ui/AnimatedSection";
 
 function Projects() {
   return (
-    <section
+    <AnimatedSection
       id="Projects"
       className="projects-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)] pb-36"
     >
@@ -19,7 +20,7 @@ function Projects() {
           })}
         </div>
       </BlurBgProvider>
-    </section>
+    </AnimatedSection>
   );
 }
 
