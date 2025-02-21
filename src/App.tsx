@@ -10,6 +10,7 @@ import cn from "classnames";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { NAVBAR_MENU } from "./constants/content";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [theme, setTheme] = useState("theme-violet");
@@ -51,7 +52,7 @@ function App() {
   return (
     <div
       className={cn(
-        "app-component p-10 pt-24 dark bg-[var(--background)]",
+        "app-component p-10 pt-24 dark bg-[var(--background)] relative",
         theme
       )}
     >
@@ -69,7 +70,7 @@ function App() {
         <Skills />
         <Projects />
       </main>
-      <footer></footer>
+      <Footer />
       <div className="fixed right-8 top-8 z-[250]">
         <Hamburger
           onClick={() => setShowHamburgerMenu((prev) => !prev)}

@@ -38,6 +38,31 @@ export const HOME_CONTENT = {
     "A Software Developer passionate about building fast, interactive, and user-friendly web applications. I love solving problems and creating useful web applications - To simply put it! :)",
 };
 
+export const HOME_LINKS: ExternalLink[] = [
+  {
+    link: "https://drive.google.com/file/d/1xzbUBiC1Oz7afVI_78vM4wlpkhkbhMgZ/view",
+    icon: SKILL_ICONS.ExternalLink,
+    title: "Resume",
+    showTitle: true,
+  },
+  {
+    link: "https://github.com/sylverflame/",
+    icon: SKILL_ICONS.Github,
+    title: "Github",
+  },
+  {
+    link: "https://gitlab.com/users/tiptoppratik/projects",
+    icon: SKILL_ICONS.Gitlab,
+    title: "Gitlab",
+  },
+  {
+    link: "https://www.linkedin.com/in/pratik-desai-3a8a7632/",
+    icon: SKILL_ICONS.Linkedin,
+    title: "Linkedin",
+  },
+];
+
+// About Section
 export const ABOUT_CONTENT = {
   description:
     "With 11 years of overall professional experience, I’ve spent the last 3 years as a Software Developer. My journey began in the Aerospace domain as a Mechanical Engineer (ADGT – Almost Rocket Science!), but during the COVID era, I discovered my passion for programming. As a self-taught developer, I transitioned into Frontend Web Development and have been building applications ever since. Currently, I’m expanding my expertise in Backend technologies, moving toward becoming a Full-Stack Developer.",
@@ -65,30 +90,6 @@ export const ABOUT_CONTENT = {
     },
   ],
 };
-
-export const HOME_LINKS: ExternalLink[] = [
-  {
-    link: "https://drive.google.com/file/d/1xzbUBiC1Oz7afVI_78vM4wlpkhkbhMgZ/view",
-    icon: SKILL_ICONS.ExternalLink,
-    title: "Resume",
-    showTitle: true,
-  },
-  {
-    link: "https://github.com/sylverflame/",
-    icon: SKILL_ICONS.Github,
-    title: "Github",
-  },
-  {
-    link: "https://gitlab.com/users/tiptoppratik/projects",
-    icon: SKILL_ICONS.Gitlab,
-    title: "Gitlab",
-  },
-  {
-    link: "https://www.linkedin.com/in/pratik-desai-3a8a7632/",
-    icon: SKILL_ICONS.Linkedin,
-    title: "Linkedin",
-  },
-];
 
 // Experience Section
 export const EXP_NODES: ExperienceType[] = [

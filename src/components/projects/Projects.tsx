@@ -7,7 +7,7 @@ function Projects() {
   return (
     <section
       id="Projects"
-      className="projects-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)]"
+      className="projects-component max-w-[1024px] m-auto min-h-screen relative text-[var(--foreground)] pb-36"
     >
       <BlurBgProvider>
         <h2 className="text-4xl lg:text-5xl xl:text-6xl text-[var(--accent)] font-bold shadow">
