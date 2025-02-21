@@ -65,7 +65,9 @@ export const HOME_LINKS: ExternalLink[] = [
 // About Section
 export const ABOUT_CONTENT = {
   description:
-    "With 11 years of overall professional experience, I’ve spent the last 3 years as a Software Developer. My journey began in the Aerospace domain as a Mechanical Engineer (ADGT – Almost Rocket Science!), but during the COVID era, I discovered my passion for programming. As a self-taught developer, I transitioned into Frontend Web Development and have been building applications ever since. Currently, I’m expanding my expertise in Backend technologies, moving toward becoming a Full-Stack Developer.",
+    "With 11 years of overall professional experience, I’ve spent the last 3 years as a Software Developer. My journey began in the Aerospace domain as a Mechanical Engineer (ADGT – Almost Rocket Science!), but during the COVID era, I discovered my passion for programming.",
+  descriptionTwo:
+    "As a self-taught developer, I transitioned into Frontend Web Development and have been building applications ever since. Currently, I’m expanding my expertise in Backend technologies, moving toward becoming a Full-Stack Developer.",
   ps: "Apart from coding I enjoy the following activities!",
   hobbies: [
     {
@@ -111,7 +113,7 @@ export const EXP_NODES: ExperienceType[] = [
     startDate: "Feb 2014",
     endDate: "Jan 2022",
     description:
-      "Worked as a Mechanical Integrity and Lifing Specialist for Gas Turbine components.",
+      "Worked as a Mechanical Integrity and Lifing Specialist for Aero Derivative Gas Turbine components.",
   },
   {
     type: "education",

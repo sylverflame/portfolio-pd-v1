@@ -1,6 +1,7 @@
 import cn from "classnames";
 import "./Navbar.css";
 import { NavbarMenuItem } from "@/types";
+import PdLogo from "../svg/PdLogo";
 
 type NavbarProps = {
   hideNavbar: boolean;
@@ -20,7 +21,7 @@ function Navbar({ hideNavbar, menuItems, scrollContentIntoView }: NavbarProps) {
     >
       <div className="navbar w-full flex max-w-[1024px] justify-between m-auto relative">
         <div className="font-bold text-[--foreground] text-2xl md:text-3xl">
-          ME
+          <PdLogo width={35} height={35} fill="#fff" />
         </div>
         <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <ul className="hidden md:flex gap-10 text-[var(--foreground)]">

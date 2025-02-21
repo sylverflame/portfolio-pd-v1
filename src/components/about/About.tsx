@@ -1,6 +1,7 @@
 import { ABOUT_CONTENT } from "@/constants/content";
 import AnimatedSection from "../ui/AnimatedSection";
 import BlurBgProvider from "../ui/BlurBgProvider";
+import { motion } from "framer-motion";
 
 function About() {
   return (
@@ -13,15 +14,23 @@ function About() {
           About Me!
         </h2>
         <div className="md:text-xl mt-10">{ABOUT_CONTENT.description}</div>
-        <div className="md:text-xl mt-10">{ABOUT_CONTENT.ps}</div>
+        <div className="md:text-xl mt-6">{ABOUT_CONTENT.descriptionTwo}</div>
+        <div className="md:text-xl mt-6">{ABOUT_CONTENT.ps}</div>
         <ul className="grid grid-cols-12 w-full mt-6">
-          {ABOUT_CONTENT.hobbies.map((hobby) => {
+          {ABOUT_CONTENT.hobbies.map((hobby, index) => {
             return (
               <li
                 key={hobby.id}
                 className="flex flex-col items-center mt-4 col-span-6 md:col-span-3"
               >
-                <hobby.icon className="text-[100px] sm:text-[120px] md:text-[150px] text-[var(--accent)]" />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.1, y: 100 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ delay: index * 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <hobby.icon className="text-[100px] sm:text-[120px] md:text-[150px] text-[var(--accent)]" />
+                </motion.div>
                 <h3 className="md:text-xl">{hobby.name}</h3>
               </li>
             );

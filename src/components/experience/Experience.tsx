@@ -16,8 +16,14 @@ function Experience() {
         </h2>
         <div className="xp-card-container">
           <ul className="flex flex-col mt-12 items-start w-[80%]">
-            {EXP_NODES.map((experience) => {
-              return <XpCard experience={experience} key={experience.title} />;
+            {EXP_NODES.map((experience, index) => {
+              return (
+                <XpCard
+                  experience={experience}
+                  key={experience.title}
+                  index={index}
+                />
+              );
             })}
           </ul>
         </div>

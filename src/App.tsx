@@ -12,6 +12,7 @@ import "./App.css";
 import { NAVBAR_MENU } from "./constants/content";
 import Footer from "./components/footer/Footer";
 import { motion } from "framer-motion";
+import PdLogo from "./components/svg/PdLogo";
 
 function App() {
   const [theme, setTheme] = useState("theme-violet");
@@ -42,10 +43,9 @@ function App() {
   }, [previousScroll]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowLoadingScreen(false);
-    }, 1000);
-  });
+    const timer = setTimeout(() => setShowLoadingScreen(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const scrollContentIntoView = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
@@ -96,9 +96,13 @@ function App() {
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ delay: 1 }}
           className="fixed top-0 left-0 w-full h-screen bg-[var(--background)] flex justify-center items-center z-[300]"
-        ></motion.div>
+        >
+          <div className="w-[100px] h-[100px] rounded-full bg-white flex justify-center items-center -translate-y-16 md:translate-y-0">
+            <PdLogo />
+          </div>
+        </motion.div>
       )}
     </div>
   );
