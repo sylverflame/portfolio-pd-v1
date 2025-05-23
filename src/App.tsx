@@ -7,12 +7,16 @@ import Skills from "@/components/skills/Skills";
 import Hamburger from "@/components/ui/Hamburger";
 import HamburgerMenu from "@/components/ui/HamburgerMenu";
 import cn from "classnames";
-import { useEffect, useState } from "react";
-import "./App.css";
-import { NAVBAR_MENU } from "./constants/content";
-import Footer from "./components/footer/Footer";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import END_POINTS from "./api/api-ep";
+import "./App.css";
+import Footer from "./components/footer/Footer";
 import PdLogo from "./components/svg/PdLogo";
+import { ENV_BE } from "./configs/api-urls";
+import { NAVBAR_MENU } from "./constants/content";
+import useAxios from "./utils/hooks/useAxios";
 
 function App() {
   const [theme, setTheme] = useState("theme-violet");
@@ -20,6 +24,10 @@ function App() {
   const [previousScroll, setPreviousScroll] = useState(0);
   const [showHamburgerMenu, setShowHamburgerMenu] = useState<boolean>(false);
   const [showLoadingScreen, setShowLoadingScreen] = useState<boolean>(true);
+  const [searchParams] = useSearchParams();
+
+  const navigate = useNavigate();
+  const { getData, postData } = useAxios();
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -45,6 +53,30 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => setShowLoadingScreen(false), 1500);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const getIp = async (): Promise<string> => {
+      const URL: string = "https://api.ipify.org?format=json";
+      let response = await getData(URL);
+      return response.ip;
+    };
+
+    const updateVisitor = async (ipAddress: string) => {
+      const URL: string = ENV_BE + END_POINTS.VISIT.updateVisitCount;
+      const payload = btoa(ipAddress);
+      await postData(URL, { dt: payload });
+    };
+
+    const updateAnalytics = async () => {
+      const src = searchParams.get("src");
+      if (src === "resume") {
+        let ip = await getIp();
+        updateVisitor(ip);
+        navigate("/");
+      }
+    };
+    updateAnalytics();
   }, []);
 
   const scrollContentIntoView = (sectionId: string): void => {
